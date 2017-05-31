@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void BAB_Sign_In()
         {
             GoTo.HomePage.BestAndBrown();
@@ -33,7 +33,7 @@ namespace Automation
             BAB_RegisterPage.ApplyForTradeAccount();
             BAB_RegisterPage.DifferentAccountType();
             BAB_RegisterPage.RegisterAs("tech@lightingenterprises.com").WithPassword("_T!chX").Register();
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

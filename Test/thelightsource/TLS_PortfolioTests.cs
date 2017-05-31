@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void TLS_Portfolio_Project()
         {
             GoTo.HomePage.TheLightSource();
@@ -37,7 +37,7 @@ namespace Automation
             PortfolioPage.Filter("Residential");
             Driver.TakeScreenshot("filtered_portfolio");
             Assert.IsTrue(PortfolioPage.IsAt("Residential"), "Failed to filter");
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

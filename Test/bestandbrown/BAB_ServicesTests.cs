@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void BAB_Help()
         {
             GoTo.HomePage.BestAndBrown();
@@ -43,7 +43,7 @@ namespace Automation
             BestAndBrown.GoTo.LearnMore.ContactUs();
             HomePage.GoTo.HomePage();
             BestAndBrown.GoTo.ThemeOfTheWeek();
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

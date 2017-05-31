@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void BAB_DesignerPage_ViewAllProducts()
         {
             GoTo.HomePage.BestAndBrown();
@@ -58,7 +58,7 @@ namespace Automation
             BrandPage.GoToLatestProduct(2);
             ProductPage.GoTo.Brand();
             BrandPage.ViewAllProducts();
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

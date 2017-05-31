@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void TLS_Services()
         {
             GoTo.HomePage.TheLightSource();
@@ -32,7 +32,7 @@ namespace Automation
             TLS_ServicesPage.GoTo.TermsAndConditions();
             TLS_ServicesPage.GoTo.Contact();
             TLS_ServicesPage.GoTo.BottomTerms();
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void TLS_Menu()
         {
             GoTo.HomePage.TheLightSource();
@@ -52,7 +52,7 @@ namespace Automation
             SearchPage.RefineBy.Finish(1);
             SearchPage.RefineBy.Range(1);
             Driver.TakeScreenshot("search_results");
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

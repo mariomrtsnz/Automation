@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void HL_SignIn()
         {
             GoTo.HomePage.HotelLighting();
@@ -29,7 +29,7 @@ namespace Automation
             HotelLighting.GoTo.Register();
             HL_RegisterPage.RegisterAs("tech@lightingenterprises.com").WithPassword("_T!chX")
                 .WorkingFor("Lighting Enterprises").Country("United Kingdom - Northern Ireland").Register();
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void BAB_Menu()
         {
             GoTo.HomePage.BestAndBrown();
@@ -56,7 +56,7 @@ namespace Automation
             SearchPage.RefineBy.Range(7);
             BAB_SearchPage.RefineBy.Designer(1);
             SearchPage.GoToProduct(1);
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void TLS_Sign_In()
         {
             GoTo.HomePage.TheLightSource();
@@ -56,7 +56,7 @@ namespace Automation
             HomePage.GoTo.Register();
             TLS_RegisterPage.RegisterAs("tech@lightingenterprises.com").WithPassword("_T!chX")
                 .WorkingFor("Lighting Enterprises").Country("United Kingdom - Northern Ireland").Register();
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

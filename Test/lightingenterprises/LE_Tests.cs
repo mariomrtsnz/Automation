@@ -32,7 +32,7 @@ namespace Automation
             LightingEnterprises.OurTeam.PreviousPage();
         }
 
-        /* [TestMethod]
+        [TestMethod]
         public void LE_Portfolio()
         {
             GoTo.HomePage.LightingEnterprises();
@@ -58,7 +58,7 @@ namespace Automation
             LightingEnterprises.SendMessageAs("Test Tech").WithPhone("123456789").WithEmail("tech@lightingenterprises.com")
               .WithMessage("This is a Test message.").Send();
             Assert.IsTrue(LightingEnterprises.MessageSent(), "Failed to send the message");
-        } */
+        }
 
         [TestCleanup]
         public void Cleanup()

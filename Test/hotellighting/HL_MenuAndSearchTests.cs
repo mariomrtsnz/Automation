@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        /* [TestMethod]
+        [TestMethod]
         public void HL_Search()
         {
             GoTo.HomePage.HotelLighting();
@@ -37,7 +37,7 @@ namespace Automation
         {
             GoTo.HomePage.HotelLighting();
             HotelLighting.GoTo.Bedroom.Bedhead();
-        } */
+        }
 
         [TestCleanup]
         public void Cleanup()

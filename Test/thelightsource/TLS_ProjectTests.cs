@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        /* [TestMethod]
+        [TestMethod]
         public void TLS_AddDescription_AddShippingNote()
         {
             GoTo.HomePage.TheLightSource();
@@ -138,7 +138,7 @@ namespace Automation
             ProductPage.GoTo.Brand();
             TLS_BrandPage.GoTo.Document(4);
             Driver.TakeScreenshot("document_page");
-        } */
+        }
 
         [TestCleanup]
         public void Cleanup()

@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        /* [TestMethod]
+        [TestMethod]
         public void HL_Services()
         {
             GoTo.HomePage.HotelLighting();
@@ -26,7 +26,7 @@ namespace Automation
             HL_ServicesPage.GoTo.PrivacyPolicy();
             HL_ServicesPage.GoTo.ContactUs();
             HL_ServicesPage.GoTo.WeAreHiring();
-        } */
+        }
 
         [TestCleanup]
         public void Cleanup()

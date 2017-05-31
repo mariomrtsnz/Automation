@@ -5,7 +5,7 @@ namespace Automation
     [TestClass]
     public class HL_PortfolioTests
     {
-        [TestInitialize]
+        /* [TestInitialize]
         public void Init()
         {
             Driver.Initialize();
@@ -37,7 +37,7 @@ namespace Automation
             PortfolioPage.Filter("Residential");
             Driver.TakeScreenshot("filtered_portfolio");
             Assert.IsTrue(PortfolioPage.IsAt("Residential"), "Failed to filter");
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

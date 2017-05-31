@@ -11,7 +11,7 @@ namespace Automation
             Driver.Initialize();
         }
 
-        [TestMethod]
+        /* [TestMethod]
         public void HL_Search_GoToRelatedItems()
         {
             GoTo.HomePage.HotelLighting();
@@ -19,7 +19,7 @@ namespace Automation
             SearchPage.GoToProduct(1);
             ProductPage.GoTo.RelatedProducts();
             RelatedProductsPage.GoTo.Product(2);
-        }
+        } */
 
         [TestCleanup]
         public void Cleanup()

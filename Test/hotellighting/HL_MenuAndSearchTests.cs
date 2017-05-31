@@ -39,10 +39,10 @@ namespace Automation
             HotelLighting.GoTo.Bedroom.Bedhead();
         }
 
-        //[TestCleanup]
-        //public void Cleanup()
-        //{
-            //Driver.Close();
-        //}
+        [TestCleanup]
+        public void Cleanup()
+        {
+            Driver.Close();
+        }
     }
 }

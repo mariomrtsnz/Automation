@@ -28,10 +28,10 @@ namespace Automation
             HL_ServicesPage.GoTo.WeAreHiring();
         }
 
-        //[TestCleanup]
-        //public void Cleanup()
-        //{
-        //Driver.Close();
-        //}
+        [TestCleanup]
+        public void Cleanup()
+        {
+            Driver.Close();
+        }
     }
 }

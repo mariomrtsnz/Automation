@@ -21,10 +21,10 @@ namespace Automation
             RelatedProductsPage.GoTo.Product(2);
         }
 
-        //[TestCleanup]
-        //public void Cleanup()
-        //{
-        //Driver.Close();
-        //}
+        [TestCleanup]
+        public void Cleanup()
+        {
+            Driver.Close();
+        }
     }
 }

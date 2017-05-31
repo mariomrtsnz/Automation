@@ -140,10 +140,10 @@ namespace Automation
             Driver.TakeScreenshot("document_page");
         }
 
-        //[TestCleanup]
-        //public void Cleanup()
-        //{
-            //Driver.Close();
-        //}
+        [TestCleanup]
+        public void Cleanup()
+        {
+            Driver.Close();
+        }
     }
 }

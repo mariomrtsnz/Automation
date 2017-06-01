@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace Automation
 {
@@ -15,7 +17,9 @@ namespace Automation
 
             public static void Services()
             {
-                var services = Driver.Instance.FindElement(By.CssSelector(".service-link:nth-of-type(1)"));
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#menu-static>li:first-of-type>a")));
+                var services = Driver.Instance.FindElement(By.CssSelector("#menu-static>li:first-of-type>a"));
                 services.Click();
             }
 
@@ -27,6 +31,8 @@ namespace Automation
 
             public static void Sourcing()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".service-link:nth-of-type(1)")));
                 var sourcing = Driver.Instance.FindElement(By.CssSelector(".service-link:nth-of-type(1)"));
                 sourcing.Click();
             }

@@ -27,10 +27,10 @@ namespace Automation
             TLS_ServicesPage.GoTo.InternationalProductCatalogue();
             TLS_ServicesPage.GoTo.DesignHelp();
             TLS_ServicesPage.GoTo.TradeCustomers();
-            TLS_ServicesPage.GoTo.ContactUs();
+            TLS_ServicesPage.GoTo.Contact();
             TLS_ServicesPage.GoTo.PrivacyPolicy();
             TLS_ServicesPage.GoTo.TermsAndConditions();
-            TLS_ServicesPage.GoTo.Contact();
+            TLS_ServicesPage.GoTo.ContactUs();
             TLS_ServicesPage.GoTo.BottomTerms();
         }
 

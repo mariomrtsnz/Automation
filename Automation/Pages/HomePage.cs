@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace Automation
 {
@@ -28,6 +30,8 @@ namespace Automation
 
             public static void HomePage()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("logo")));
                 var mainLogo = Driver.Instance.FindElement(By.Id("logo"));
                 mainLogo.Click();
             }

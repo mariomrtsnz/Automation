@@ -72,14 +72,6 @@ namespace Automation
                 tradeCustomers.Click();
             }
 
-            public static void ContactUs()
-            {
-                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.LinkText("Contact Us")));
-                var contactUs = Driver.Instance.FindElement(By.LinkText("Contact Us"));
-                contactUs.Click();
-            }
-
             public static void PrivacyPolicy()
             {
                 WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));

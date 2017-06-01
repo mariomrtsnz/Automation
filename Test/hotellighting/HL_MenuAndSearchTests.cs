@@ -12,7 +12,7 @@ namespace Automation
         }
 
         [TestMethod]
-        public void HL_Search()
+        public void HL_Search_And_Filter()
         {
             GoTo.HomePage.HotelLighting();
             HotelLighting.Search("Red");

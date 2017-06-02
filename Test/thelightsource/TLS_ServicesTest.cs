@@ -15,9 +15,6 @@ namespace Automation
         public void TLS_Services()
         {
             GoTo.HomePage.TheLightSource();
-            TheLightSource.GoTo.Sourcing();
-            HomePage.GoTo.HomePage();
-            TheLightSource.GoTo.ValueEngineering();
             //Bespoke goes to the same place as Sourcing
             //TheLightSource.GoTo.Bespoke();
             TheLightSource.GoTo.Services();

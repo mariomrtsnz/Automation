@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace Automation
 {
@@ -17,6 +19,8 @@ namespace Automation
 
         public static void Close()
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".fancybox-item.fancybox-close")));
             var closeButton = Driver.Instance.FindElement(By.CssSelector(".fancybox-item.fancybox-close"));
             closeButton.Click();
         }
@@ -30,6 +34,8 @@ namespace Automation
 
         public static void AddToProject()
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("add-to-project")));
             var addToProject = Driver.Instance.FindElement(By.Id("add-to-project"));
             addToProject.Click();
         }
@@ -38,6 +44,8 @@ namespace Automation
         {
             public static void Project()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".view-project.primary.button")));
                 var checkout = Driver.Instance.FindElement(By.CssSelector(".view-project.primary.button"));
                 checkout.Click();
             }
@@ -63,6 +71,8 @@ namespace Automation
 
         public static void OpenImage()
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("img-main")));
             var mainImage = Driver.Instance.FindElement(By.Id("img-main"));
             mainImage.Click();
         }

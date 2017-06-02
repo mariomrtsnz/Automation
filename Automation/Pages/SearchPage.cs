@@ -104,6 +104,8 @@ namespace Automation
 
         public static void GoToProduct(int productNumber)
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($".//div[@class='results']/a[{productNumber}]")));
             var product = Driver.Instance.FindElement(By.XPath($".//div[@class='results']/a[{productNumber}]"));
             product.Click();
         }

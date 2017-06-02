@@ -81,6 +81,8 @@ namespace Automation
         {
             try
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(13));
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("fancybox-image")));
                 bool isElementDisplayed = Driver.Instance.FindElement(By.ClassName("fancybox-image")).Displayed;
                 return true;
             }

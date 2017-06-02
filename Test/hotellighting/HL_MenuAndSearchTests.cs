@@ -36,7 +36,7 @@ namespace Automation
         public void HL_Menu()
         {
             GoTo.HomePage.HotelLighting();
-            HotelLighting.GoTo.Bedroom.Bedhead();
+            HotelLighting.GoTo.ByProductType.CeilingSpotLights();
         }
 
         [TestCleanup]

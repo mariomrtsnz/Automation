@@ -16,7 +16,7 @@ namespace Automation
         {
             GoTo.HomePage.TheLightSource();
             //TheLightSource.GoTo.ExteriorLighting.General();
-            TheLightSource.GoTo.ExteriorLighting.WallRecessed();
+            TheLightSource.GoTo.HospitalityLighting.BedroomLighting();
         }
 
         [TestMethod]

@@ -15,7 +15,7 @@ namespace Automation
         public void BAB_Menu()
         {
             GoTo.HomePage.BestAndBrown();
-            BestAndBrown.GoTo.TableLamps.Columns();
+            BestAndBrown.GoTo.Bathroom.Featured();
         }
 
         [TestMethod]

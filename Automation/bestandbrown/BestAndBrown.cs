@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace Automation
 {
@@ -56,6 +58,8 @@ namespace Automation
                     var hoverCeilingFittings = Driver.Instance.FindElement(By.Id("menu-ceiling"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverCeilingFittings).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-ceiling-child']//span[@class='sub-menu-header'][contains(text(), 'Bright idea')]/..//img")));
                     var brightIdea = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-ceiling-child']//span[@class='sub-menu-header'][contains(text(), 'Bright idea')]/..//img"));
                     brightIdea.Click();
                 }
@@ -65,6 +69,8 @@ namespace Automation
                     var hoverCeilingFittings = Driver.Instance.FindElement(By.Id("menu-ceiling"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverCeilingFittings).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-ceiling-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img")));
                     var featured = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-ceiling-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img"));
                     featured.Click();
                 }
@@ -74,6 +80,8 @@ namespace Automation
                     var hoverCeilingFittings = Driver.Instance.FindElement(By.Id("menu-ceiling"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverCeilingFittings).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Chandeliers/Multi-arm Fittings')]")));
                     var chandeliersMultiarm = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Chandeliers/Multi-arm Fittings')]"));
                     chandeliersMultiarm.Click();
                 }
@@ -83,6 +91,8 @@ namespace Automation
                     var hoverCeilingFittings = Driver.Instance.FindElement(By.Id("menu-ceiling"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverCeilingFittings).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Pendants')]")));
                     var pendants = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Pendants')]"));
                     pendants.Click();
                 }
@@ -92,6 +102,8 @@ namespace Automation
                     var hoverCeilingFittings = Driver.Instance.FindElement(By.Id("menu-ceiling"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverCeilingFittings).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Recessed Spots')]")));
                     var recessedSpots = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Recessed Spots')]"));
                     recessedSpots.Click();
                 }
@@ -101,6 +113,8 @@ namespace Automation
                     var hoverCeilingFittings = Driver.Instance.FindElement(By.Id("menu-ceiling"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverCeilingFittings).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Surface/Close-to-Surface Fittings')]")));
                     var surfaceClosetosurface = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Surface/Close-to-Surface Fittings')]"));
                     surfaceClosetosurface.Click();
                 }
@@ -110,6 +124,8 @@ namespace Automation
                     var hoverCeilingFittings = Driver.Instance.FindElement(By.Id("menu-ceiling"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverCeilingFittings).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Surface Spots')]")));
                     var surfaceSpots = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-ceiling-child']/div[1]//a[contains(text(), 'Surface Spots')]"));
                     surfaceSpots.Click();
                 }
@@ -128,6 +144,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img")));
                     var featured = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img"));
                     featured.Click();
                 }
@@ -137,6 +155,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Posts & Bollards')]")));
                     var postsAndBollards = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Posts & Bollards')]"));
                     postsAndBollards.Click();
                 }
@@ -146,6 +166,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Floor Lights')]")));
                     var floorLights = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Floor Lights')]"));
                     floorLights.Click();
                 }
@@ -155,6 +177,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'In-ground/Buried Lights')]")));
                     var inGroundBuriedLights = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'In-ground/Buried Lights')]"));
                     inGroundBuriedLights.Click();
                 }
@@ -164,6 +188,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Pendant/Flush Lights')]")));
                     var pendantFlushLights = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Pendant/Flush Lights')]"));
                     pendantFlushLights.Click();
                 }
@@ -173,6 +199,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Pillar Mount/Pedestal')]")));
                     var pillarMountPedestal = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Pillar Mount/Pedestal')]"));
                     pillarMountPedestal.Click();
                 }
@@ -182,6 +210,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Spotlights')]")));
                     var spotlights = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Spotlights')]"));
                     spotlights.Click();
                 }
@@ -191,6 +221,8 @@ namespace Automation
                     var hoverExteriorLighting = Driver.Instance.FindElement(By.Id("menu-exterior"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverExteriorLighting).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Wall Mounted Fittings')]")));
                     var wallMountedFittings = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-exterior-child']/div[1]//a[contains(text(), 'Wall Mounted Fittings')]"));
                     wallMountedFittings.Click();
                 }
@@ -209,6 +241,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']//span[@class='sub-menu-header'][contains(text(), 'What')]/..//img")));
                     var whatsNew = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']//span[@class='sub-menu-header'][contains(text(), 'What')]/..//img"));
                     whatsNew.Click();
                 }
@@ -218,6 +252,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img")));
                     var featured = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img"));
                     featured.Click();
                 }
@@ -227,6 +263,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Candlesticks')]")));
                     var candlesticks = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Candlesticks')]"));
                     candlesticks.Click();
                 }
@@ -236,6 +274,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Hinge-arm/Adjustable')]")));
                     var hingearmAdjustable = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Hinge-arm/Adjustable')]"));
                     hingearmAdjustable.Click();
                 }
@@ -245,6 +285,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'LED')]")));
                     var led = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'LED')]"));
                     led.Click();
                 }
@@ -254,6 +296,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Spotlight')]")));
                     var spotlight = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Spotlight')]"));
                     spotlight.Click();
                 }
@@ -263,6 +307,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Standard Lamp')]")));
                     var standardLamp = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Standard Lamp')]"));
                     standardLamp.Click();
                 }
@@ -272,6 +318,8 @@ namespace Automation
                     var hoverFloorLamps = Driver.Instance.FindElement(By.Id("menu-floor"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverFloorLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Uplighters')]")));
                     var uplighters = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-floor-child']/div[1]//a[contains(text(), 'Uplighters')]"));
                     uplighters.Click();
                 }
@@ -290,6 +338,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']//span[@class='sub-menu-header'][contains(text(), 'Bright ideas')]/..//img")));
                     var brightIdeas = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']//span[@class='sub-menu-header'][contains(text(), 'Bright ideas')]/..//img"));
                     brightIdeas.Click();
                 }
@@ -299,6 +349,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img")));
                     var featured = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img"));
                     featured.Click();
                 }
@@ -308,6 +360,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Candlesticks')]")));
                     var candlesticks = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Candlesticks')]"));
                     candlesticks.Click();
                 }
@@ -317,6 +371,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Columns')]")));
                     var columns = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Columns')]"));
                     columns.Click();
                 }
@@ -326,6 +382,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Desklamp')]")));
                     var desklamp = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Desklamp')]"));
                     desklamp.Click();
                 }
@@ -335,6 +393,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Low Energy')]")));
                     var lowEnergy = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Low Energy')]"));
                     lowEnergy.Click();
                 }
@@ -344,6 +404,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Novelty')]")));
                     var novelty = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Novelty')]"));
                     novelty.Click();
                 }
@@ -353,6 +415,8 @@ namespace Automation
                     var hoverTableLamps = Driver.Instance.FindElement(By.Id("menu-table"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverTableLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Touch Lamps')]")));
                     var touchLamps = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-table-child']/div[1]//a[contains(text(), 'Touch Lamps')]"));
                     touchLamps.Click();
                 }
@@ -371,6 +435,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img")));
                     var featured = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img"));
                     featured.Click();
                 }
@@ -380,6 +446,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Candlesticks')]")));
                     var candlesticks = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Candlesticks')]"));
                     candlesticks.Click();
                 }
@@ -389,6 +457,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Directional/Adjustable')]")));
                     var directionalAdjustable = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Directional/Adjustable')]"));
                     directionalAdjustable.Click();
                 }
@@ -398,6 +468,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Downlights')]")));
                     var downlights = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Downlights')]"));
                     downlights.Click();
                 }
@@ -407,6 +479,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Fluorescent/Low Energy')]")));
                     var fluorescentLowEnergy = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Fluorescent/Low Energy')]"));
                     fluorescentLowEnergy.Click();
                 }
@@ -416,6 +490,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Lantern')]")));
                     var lantern = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Lantern')]"));
                     lantern.Click();
                 }
@@ -425,6 +501,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Picture/Mirror/Display')]")));
                     var pictureMirrorDisplay = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Picture/Mirror/Display')]"));
                     pictureMirrorDisplay.Click();
                 }
@@ -434,6 +512,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Recessed')]")));
                     var recessed = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Recessed')]"));
                     recessed.Click();
                 }
@@ -443,6 +523,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Up & Down Lighters')]")));
                     var upAndDownLighters = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Up & Down Lighters')]"));
                     upAndDownLighters.Click();
                 }
@@ -452,6 +534,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Uplighters')]")));
                     var uplighters = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Uplighters')]"));
                     uplighters.Click();
                 }
@@ -461,6 +545,8 @@ namespace Automation
                     var hoverWallLamps = Driver.Instance.FindElement(By.Id("menu-wall"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverWallLamps).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Wall Washers')]")));
                     var wallWashers = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-wall-child']/div[1]//a[contains(text(), 'Wall Washers')]"));
                     wallWashers.Click();
                 }
@@ -479,6 +565,8 @@ namespace Automation
                     var hoverBathroom = Driver.Instance.FindElement(By.Id("menu-bathroom"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverBathroom).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-bathroom-child']//span[@class='sub-menu-header'][contains(text(), 'Bright ideas')]/..//img")));
                     var brightIdeas = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-bathroom-child']//span[@class='sub-menu-header'][contains(text(), 'Bright ideas')]/..//img"));
                     brightIdeas.Click();
                 }
@@ -488,6 +576,8 @@ namespace Automation
                     var hoverBathroom = Driver.Instance.FindElement(By.Id("menu-bathroom"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverBathroom).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-bathroom-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img")));
                     var featured = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-bathroom-child']//span[@class='sub-menu-header'][contains(text(), 'Featured')]/..//img"));
                     featured.Click();
                 }
@@ -497,6 +587,8 @@ namespace Automation
                     var hoverBathroom = Driver.Instance.FindElement(By.Id("menu-bathroom"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverBathroom).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-bathroom-child']/div[1]//a[contains(text(), 'Ceiling Fittings')]")));
                     var ceilingFittings = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-bathroom-child']/div[1]//a[contains(text(), 'Ceiling Fittings')]"));
                     ceilingFittings.Click();
                 }
@@ -506,6 +598,8 @@ namespace Automation
                     var hoverBathroom = Driver.Instance.FindElement(By.Id("menu-bathroom"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverBathroom).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-bathroom-child']/div[1]//a[contains(text(), 'Wall Fittings')]")));
                     var wallFittings = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-bathroom-child']/div[1]//a[contains(text(), 'Wall Fittings')]"));
                     wallFittings.Click();
                 }
@@ -515,6 +609,8 @@ namespace Automation
                     var hoverBathroom = Driver.Instance.FindElement(By.Id("menu-bathroom"));
                     Actions builder = new Actions(Driver.Instance);
                     builder.MoveToElement(hoverBathroom).Perform();
+                    WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                    IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@id='menu-bathroom-child']/div[1]//a[contains(text(), 'Illuminated Mirrors & Cabinets')]")));
                     var illuminatedMirrorsAndCabinets = Driver.Instance.FindElement(By.XPath(".//div[@id='menu-bathroom-child']/div[1]//a[contains(text(), 'Illuminated Mirrors & Cabinets')]"));
                     illuminatedMirrorsAndCabinets.Click();
                 }

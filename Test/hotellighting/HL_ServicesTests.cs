@@ -15,7 +15,6 @@ namespace Automation
         public void HL_Services()
         {
             GoTo.HomePage.HotelLighting();
-            HotelLighting.GoTo.BespokeProducts();
             HotelLighting.GoTo.Services();
             HL_ServicesPage.GoTo.AboutUs();
             HL_ServicesPage.GoTo.Bespoke();

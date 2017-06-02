@@ -27,7 +27,6 @@ namespace Automation
             TLS_ServicesPage.GoTo.Contact();
             TLS_ServicesPage.GoTo.PrivacyPolicy();
             TLS_ServicesPage.GoTo.TermsAndConditions();
-            TLS_ServicesPage.GoTo.BottomTerms();
         }
 
         [TestCleanup]

@@ -44,7 +44,7 @@ namespace Automation
         {
             public static void Project()
             {
-                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(13));
                 IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".view-project.primary.button")));
                 var checkout = Driver.Instance.FindElement(By.CssSelector(".view-project.primary.button"));
                 checkout.Click();
@@ -71,7 +71,7 @@ namespace Automation
 
         public static void OpenImage()
         {
-            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(13));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("img-main")));
             var mainImage = Driver.Instance.FindElement(By.Id("img-main"));
             mainImage.Click();

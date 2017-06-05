@@ -52,12 +52,16 @@ namespace Automation
 
             public static void Checkout()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".begin-checkout.button.secondary")));
                 var checkout = Driver.Instance.FindElement(By.CssSelector(".begin-checkout.button.secondary"));
                 checkout.Click();
             }
 
             public static void RelatedProducts()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".general-info>p>a:first-of-type")));
                 var relatedProducts = Driver.Instance.FindElement(By.CssSelector(".general-info>p>a:first-of-type"));
                 relatedProducts.Click();
             }

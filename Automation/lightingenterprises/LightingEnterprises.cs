@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace Automation
 {
@@ -16,12 +18,16 @@ namespace Automation
         {
             public static void NextPage()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".bx-next>img")));
                 var nextPage = Driver.Instance.FindElement(By.CssSelector(".bx-next>img"));
                 nextPage.Click();
             }
 
             public static void PreviousPage()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".bx-next>img")));
                 var prevPage = Driver.Instance.FindElement(By.CssSelector(".bx-prev>img"));
                 prevPage.Click();
             }
@@ -31,6 +37,8 @@ namespace Automation
         {
             public static void FilterBy(string filterName)
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($".//span/h5[contains(text(), '{filterName}')]")));
                 var filter = Driver.Instance.FindElement(By.XPath($".//span/h5[contains(text(), '{filterName}')]"));
                 filter.Click();
             }
@@ -45,12 +53,16 @@ namespace Automation
 
             public static void OpenModal()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".portfolio-wrapper>img")));
                 var project = Driver.Instance.FindElement(By.CssSelector(".portfolio-wrapper>img"));
                 project.Click();
             }
 
             public static void CloseModal()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".modal>div>p")));
                 var closeButton = Driver.Instance.FindElement(By.CssSelector(".modal>div>p"));
                 closeButton.Click();
             }
@@ -66,24 +78,32 @@ namespace Automation
 
             public static void About()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("about")));
                 var about = Driver.Instance.FindElement(By.Id("about"));
                 about.Click();
             }
 
             public static void Websites()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("websites")));
                 var websites = Driver.Instance.FindElement(By.Id("websites"));
                 websites.Click();
             }
 
             public static void OurTeam()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("ourTeam")));
                 var ourTeam = Driver.Instance.FindElement(By.Id("ourTeam"));
                 ourTeam.Click();
             }
 
             public static void Projects()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("menuProjects")));
                 var projects = Driver.Instance.FindElement(By.Id("menuProjects"));
                 projects.Click();
             }
@@ -96,6 +116,8 @@ namespace Automation
 
             public static void Contact()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("contact")));
                 var contact = Driver.Instance.FindElement(By.Id("contact"));
                 contact.Click();
             }
@@ -109,6 +131,8 @@ namespace Automation
 
         public static void ShowBrands()
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("toggle")));
             var toggleSwitch = Driver.Instance.FindElement(By.Id("toggle"));
             toggleSwitch.Click();
         }
@@ -149,6 +173,9 @@ namespace Automation
 
             public void Send()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("Name")));
+
                 var name = Driver.Instance.FindElement(By.Id("Name"));
                 name.SendKeys(fullName);
 

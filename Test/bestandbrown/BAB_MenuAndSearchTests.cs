@@ -15,7 +15,7 @@ namespace Automation
         public void BAB_Menu()
         {
             GoTo.HomePage.BestAndBrown();
-            BestAndBrown.GoTo.Bathroom.CeilingFittings();
+            BestAndBrown.GoTo.CeilingFittings.BrightIdea();
         }
 
         [TestMethod]

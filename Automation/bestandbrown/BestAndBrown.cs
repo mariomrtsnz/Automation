@@ -49,11 +49,11 @@ namespace Automation
                 brandOfTheWeek.Click();
             }
 
-            public static void Brand(int brandNumber)
+            public static void Brand()
             {
                 WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath($".//div[@class='brand-list']/a[{brandNumber}]")));
-                var brand = Driver.Instance.FindElement(By.XPath($".//div[@class='brand-list']/a[{brandNumber}]"));
+                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@class='brand-list']/a[6]")));
+                var brand = Driver.Instance.FindElement(By.XPath(".//div[@class='brand-list']/a[6]"));
                 brand.Click();
             }
 

@@ -37,15 +37,12 @@ namespace Automation
         }
 
         [TestMethod]
-        public void BAB_LatestBrandProduct_SelectOption_AddToProject()
+        public void BAB_AddToProject_ChangeShipping()
         {
             GoTo.HomePage.BestAndBrown();
-            BestAndBrown.GoTo.Brand(6);
-            BrandPage.GoToLatestProduct(2);
-            BAB_ProductPage.SelectOption(2);
+            HomePage.Search("white");
+            SearchPage.GoToProduct(1);
             ProductPage.AddToProject();
-            //ProductPage.Close();
-            //ProductPage.GoTo.RelatedProducts();
             ProductPage.GoTo.Project();
             BAB_ProjectPage.ChangeShippingTo("United Kingdom - Northern Ireland");
         }
@@ -54,16 +51,17 @@ namespace Automation
         public void BAB_HomepageBrands()
         {
             GoTo.HomePage.BestAndBrown();
-            BestAndBrown.GoTo.Brand(6);
+            BestAndBrown.GoTo.Brand();
             BrandPage.GoToLatestProduct(2);
+            BAB_ProductPage.SelectOption(2);
             ProductPage.GoTo.Brand();
             BrandPage.ViewAllProducts();
         }
 
-        [TestCleanup]
+        /* [TestCleanup]
         public void Cleanup()
         {
             Driver.Close();
-        }
+        } */
     }
 }

@@ -19,14 +19,6 @@ namespace Automation
         }
 
         [TestMethod]
-        public void BAB_OrderBy_Popularity()
-        {
-            GoTo.HomePage.BestAndBrown();
-            HomePage.Search("black");
-            //SearchPage.OrderBy("Popularity");
-        }
-
-        [TestMethod]
         public void BAB_OpenAndCloseProductImage()
         {
             GoTo.HomePage.BestAndBrown();

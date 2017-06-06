@@ -132,14 +132,6 @@ namespace Automation
             product.Click();
         }
 
-        public static void OrderBy(string order)
-        {
-            var orderBy = Driver.Instance.FindElement(By.CssSelector("#pager-top>.order-by>select"));
-            orderBy.Click();
-            var orderOption = Driver.Instance.FindElement(By.XPath($".//div[@id='pager-top']/div[@class='order-by']/select/option[contains(text(), '{order}')]"));
-            orderOption.Click();
-        }
-
         public static void ChangeView(int number)
         {
             WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(60));

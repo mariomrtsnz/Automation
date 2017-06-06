@@ -17,7 +17,7 @@ namespace Automation
         public static void GoToPortfolioProject(int projectNumber)
         {
             WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($".//*[@id='portfolio-results']/a[{projectNumber}]/img")));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath($".//*[@id='portfolio-results']/a[{projectNumber}]/img")));
             var project = Driver.Instance.FindElement(By.XPath($".//*[@id='portfolio-results']/a[{projectNumber}]/img"));
             project.Click();
         }
@@ -25,7 +25,7 @@ namespace Automation
         public static void NextPage()
         {
             WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.LinkText("Next")));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.LinkText("Next")));
             var nextButton = Driver.Instance.FindElement(By.LinkText("Next"));
             nextButton.Click();
         }
@@ -33,7 +33,7 @@ namespace Automation
         public static void PreviousPage()
         {
             WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.LinkText("Previous")));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.LinkText("Previous")));
             var prevButton = Driver.Instance.FindElement(By.LinkText("Previous"));
             prevButton.Click();
         }
@@ -49,7 +49,7 @@ namespace Automation
         public static void Page(int pageNumber)
         {
             WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($".//*[@id='pager_T']/ul/li[{pageNumber}]/a")));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath($".//*[@id='pager_T']/ul/li[{pageNumber}]/a")));
             var numberButton = Driver.Instance.FindElement(By.XPath($".//*[@id='pager_T']/ul/li[{pageNumber}]/a"));
             numberButton.Click();
         }

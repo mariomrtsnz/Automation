@@ -77,7 +77,12 @@ namespace Automation
             HomePage.GoTo.SignIn();
             SignInPage.SignInAs("tech@lightingenterprises.com").WithPassword("_T!chX").SignIn();
             Assert.IsTrue(SignInPage.SignedIn, "Failed to sign in");
-            TheLightSource.GoTo.Basket();
+            HomePage.Search("blue");
+            SearchPage.GoToProduct(3);
+            ProductPage.AddToProject();
+            Assert.IsTrue(ProductPage.ProductAdded, "Failed to add the product");
+            ProductPage.GoTo.Project();
+            Assert.IsFalse(TLS_ProjectPage.ItemDoesntExist, "Item didn't add properly to basket");
             ProjectPage.ModifyQuantityTo(3);
             ProjectPage.Save();
         }

@@ -20,8 +20,6 @@ namespace Automation
             BAB_HelpPage.ContactUs();
             BAB_HelpPage.TermsAndConditions();
             BAB_HelpPage.PrivacyPolicy();
-            BAB_HelpPage.AboutUs();
-            Assert.IsTrue(BAB_HelpPage.IsAt("About Us"), "Failed to go to that service");
         }
 
         [TestMethod]

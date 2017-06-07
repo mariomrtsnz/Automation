@@ -81,7 +81,7 @@ namespace Automation
             SearchPage.GoToProduct(3);
             ProductPage.AddToProject();
             Assert.IsTrue(ProductPage.ProductAdded, "Failed to add the product");
-            ProductPage.GoTo.Project();
+            //ProductPage.GoTo.Project();
             Assert.IsFalse(TLS_ProjectPage.ItemDoesntExist, "Item didn't add properly to basket");
             ProjectPage.ModifyQuantityTo(3);
             ProjectPage.Save();

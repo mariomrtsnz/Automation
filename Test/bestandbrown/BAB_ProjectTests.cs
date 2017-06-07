@@ -58,10 +58,10 @@ namespace Automation
             BrandPage.ViewAllProducts();
         }
 
-        /* [TestCleanup]
+        [TestCleanup]
         public void Cleanup()
         {
             Driver.Close();
-        } */
+        }
     }
 }

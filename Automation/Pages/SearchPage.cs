@@ -134,7 +134,7 @@ namespace Automation
 
         public static void ChangeView(int number)
         {
-            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(60));
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(30));
             IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName($"view{number}")));
             var viewStyle = Driver.Instance.FindElement(By.ClassName($"view{number}"));
             viewStyle.Click();

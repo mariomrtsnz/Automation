@@ -88,7 +88,7 @@ namespace Automation
         }
 
         [TestMethod]
-        public void TLS_Create_Project_And_SwitchProject()
+        public void TLS_CreateProject()
         {
             GoTo.HomePage.TheLightSource();
             HomePage.GoTo.SignIn();
@@ -97,12 +97,18 @@ namespace Automation
             TheLightSource.CreateProject("Test Project 1");
             Assert.IsTrue(TheLightSource.IsInProject("Test Project 1"), "Failed to create project");
             Driver.TakeScreenshot("project_created");
-            TheLightSource.GoTo.Basket();
-            TLS_ProjectPage.AddZone("Kitchen");
-            Driver.TakeScreenshot("zone_added");
+        }
+
+        [TestMethod]
+        public void TLS_SwitchProject()
+        {
             GoTo.HomePage.TheLightSource();
-            TheLightSource.SwitchToProject("Shopping Basket");
-            Driver.TakeScreenshot("project_switched");
+            HomePage.GoTo.SignIn();
+            SignInPage.SignInAs("tech@lightingenterprises.com").WithPassword("_T!chX").SignIn();
+            Assert.IsTrue(SignInPage.SignedIn, "Failed to sign in");
+            TheLightSource.SwitchToProject("Test Project 1");
+            Assert.IsTrue(TheLightSource.IsInProject("Test Project 1"), "Failed to switch to project");
+            Driver.TakeScreenshot("switchedproject");
         }
 
         [TestMethod]

@@ -11,6 +11,8 @@ namespace Automation
         {
             public static void Basket()
             {
+                WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("view-project-link")));
                 var projectBasket = Driver.Instance.FindElement(By.Id("view-project-link"));
                 projectBasket.Click();
             }
@@ -403,6 +405,8 @@ namespace Automation
 
         public static void SwitchToProject(string projectName)
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("project-title")));
             var currentProject = Driver.Instance.FindElement(By.Id("project-title"));
             currentProject.Click();
             var switchToProject = Driver.Instance.FindElement(By.XPath($".//li[@class='project-changer'][contains(text(), '{projectName}')]"));
@@ -411,6 +415,8 @@ namespace Automation
 
         public static void CreateProject(string projectName)
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("project-title")));
             var currentProject = Driver.Instance.FindElement(By.Id("project-title"));
             currentProject.Click();
             var createProjectButton = Driver.Instance.FindElement(By.Id("show-project-create-popup"));

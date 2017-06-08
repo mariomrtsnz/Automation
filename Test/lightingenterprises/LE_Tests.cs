@@ -16,20 +16,21 @@ namespace Automation
         {
             GoTo.HomePage.LightingEnterprises();
             LightingEnterprises.GoTo.About();
+            LightingEnterprises.GoTo.Brands();
+            LightingEnterprises.ShowBrands();
             LightingEnterprises.GoTo.Websites();
             LightingEnterprises.GoTo.OurTeam();
+            LightingEnterprises.OurTeam.NextPage();
+            LightingEnterprises.OurTeam.PreviousPage();
             LightingEnterprises.GoTo.Projects();
             //LightingEnterprises.GoTo.Blog();
             LightingEnterprises.GoTo.Contact();
             LightingEnterprises.GoTo.Home();
             LightingEnterprises.GoTo.Brands();
-            LightingEnterprises.ShowBrands();
             //Next step is Show Less Brands
             LightingEnterprises.ShowBrands();
             Driver.TakeScreenshot("showinglessbrands");
             Assert.IsFalse(LightingEnterprises.ShowingMore(), "Failed to Show Less brands");
-            LightingEnterprises.OurTeam.NextPage();
-            LightingEnterprises.OurTeam.PreviousPage();
         }
 
         [TestMethod]
@@ -40,6 +41,7 @@ namespace Automation
             LightingEnterprises.Projects.FilterBy("Bars");
             //Assert.IsTrue(LightingEnterprises.Projects.FilteredBy("Bars"), "Failed to filter portfolio");
             LightingEnterprises.Projects.OpenModal();
+            Driver.TakeScreenshot("modalopened");
             LightingEnterprises.Projects.CloseModal();
         }
 

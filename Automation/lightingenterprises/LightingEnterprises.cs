@@ -8,6 +8,8 @@ namespace Automation
     {
         public static bool ShowingMore()
         {
+            WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(".//*[@id='toggle'][contains(text(), 'Show more')]")));
             var name = Driver.Instance.FindElements(By.Id("toggle"));
             if (name.Count > 0)
                 return name[0].Text == "Show less";
@@ -62,7 +64,7 @@ namespace Automation
             public static void CloseModal()
             {
                 WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".modal>div>p")));
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector(".modal>div>p")));
                 var closeButton = Driver.Instance.FindElement(By.CssSelector(".modal>div>p"));
                 closeButton.Click();
             }

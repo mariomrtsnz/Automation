@@ -52,8 +52,8 @@ namespace Automation
             public static void Brand()
             {
                 WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-                IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(".//div[@class='brand-list']/a[6]")));
-                var brand = Driver.Instance.FindElement(By.XPath(".//div[@class='brand-list']/a[6]"));
+                IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(".//div[@class='brand-list']/a[1]")));
+                var brand = Driver.Instance.FindElement(By.XPath(".//div[@class='brand-list']/a[1]"));
                 brand.Click();
             }
 

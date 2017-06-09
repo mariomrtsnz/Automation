@@ -27,10 +27,8 @@ namespace Automation
             BAB_RangePage.GoToProduct(1);
             ProductPage.Quantity(2);
             ProductPage.AddToProject();
-            //Assert.IsTrue(ProductPage.ProductAdded, "Failed to add the product");
             ProductPage.GoTo.Project();
             ProjectPage.ModifyQuantityTo(1);
-            //BAB_ProjectPage.GoToProduct();
             ProjectPage.Save();
             ProjectPage.DeleteItems();
             Assert.IsTrue(BAB_ProjectPage.ItemDoesntExist, "Failed to delete item");
@@ -45,17 +43,6 @@ namespace Automation
             ProductPage.AddToProject();
             ProductPage.GoTo.Project();
             BAB_ProjectPage.ChangeShippingTo("United Kingdom - Northern Ireland");
-        }
-
-        [TestMethod]
-        public void BAB_HomepageBrands()
-        {
-            GoTo.HomePage.BestAndBrown();
-            BestAndBrown.GoTo.Brand();
-            BrandPage.GoToLatestProduct(2);
-            BAB_ProductPage.SelectOption(2);
-            ProductPage.GoTo.Brand();
-            BrandPage.ViewAllProducts();
         }
 
         [TestCleanup]

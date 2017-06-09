@@ -23,6 +23,16 @@ namespace Automation
         }
 
         [TestMethod]
+        public void BAB_HomepageBrands_GoToLatestProduct_GoToBrand_ViewAllProducts()
+        {
+            GoTo.HomePage.BestAndBrown();
+            BestAndBrown.GoTo.Brand();
+            BrandPage.GoToLatestProduct(2);
+            ProductPage.GoTo.Brand();
+            BrandPage.ViewAllProducts();
+        }
+
+        [TestMethod]
         public void BAB_Homepage_Click_Around()
         {
             GoTo.HomePage.BestAndBrown();
@@ -32,6 +42,14 @@ namespace Automation
             BestAndBrown.GoTo.BrandOfTheWeek();
             HomePage.GoTo.HomePage();
             BestAndBrown.GoTo.DesignerOfTheWeek();
+            HomePage.GoTo.HomePage();
+            BestAndBrown.GoTo.ThemeOfTheWeek();
+        }
+
+        [TestMethod]
+        public void BAB_CustomerSupport()
+        {
+            GoTo.HomePage.BestAndBrown();
             BestAndBrown.GoTo.CustomerSupport.Delivery();
             BestAndBrown.GoTo.CustomerSupport.PriceGuarantee();
             BestAndBrown.GoTo.CustomerSupport.PrivacyPolicy();
@@ -39,14 +57,12 @@ namespace Automation
             BestAndBrown.GoTo.LearnMore.TradeCustomers();
             BestAndBrown.GoTo.LearnMore.AboutUs();
             BestAndBrown.GoTo.LearnMore.ContactUs();
-            HomePage.GoTo.HomePage();
-            BestAndBrown.GoTo.ThemeOfTheWeek();
         }
 
-        [TestCleanup]
+        /*[TestCleanup]
         public void Cleanup()
         {
             Driver.Close();
-        }
+        }*/
     }
 }

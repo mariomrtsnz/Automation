@@ -19,11 +19,12 @@ namespace Automation
         }
 
         [TestMethod]
-        public void BAB_OpenAndCloseProductImage()
+        public void BAB_OpenAndCloseProductImage_SelectOption()
         {
             GoTo.HomePage.BestAndBrown();
             HomePage.Search("blue");
             SearchPage.GoToProduct(3);
+            BAB_ProductPage.SelectOption(2);
             ProductPage.OpenImage();
             Assert.IsTrue(ProductPage.ImageOpened(), "Failed to open image");
             Driver.TakeScreenshot("openedimage");

@@ -14,6 +14,7 @@ namespace Automation
         [TestMethod]
         public void TLS_Sign_In()
         {
+            //Driver.ChangeResolutionTo(640, 480);
             GoTo.HomePage.TheLightSource();
             HomePage.GoTo.SignIn();
             //SignInPage.GoToRegister();

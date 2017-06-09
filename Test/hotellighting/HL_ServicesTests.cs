@@ -17,7 +17,6 @@ namespace Automation
             GoTo.HomePage.HotelLighting();
             HotelLighting.GoTo.Services();
             HL_ServicesPage.GoTo.AboutUs();
-            HL_ServicesPage.GoTo.Bespoke();
             HL_ServicesPage.GoTo.ValueEngineering();
             HL_ServicesPage.GoTo.PriceMatchGuarantee();
             HL_ServicesPage.GoTo.Delivery();

@@ -12,7 +12,7 @@ namespace Automation
         }
 
         [TestMethod]
-        public void BAB_Help()
+        public void BAB_Services()
         {
             GoTo.HomePage.BestAndBrown();
             BestAndBrown.GoTo.LearnMore.AboutUs();

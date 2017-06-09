@@ -59,10 +59,10 @@ namespace Automation
             BestAndBrown.GoTo.LearnMore.ContactUs();
         }
 
-        /*[TestCleanup]
+        [TestCleanup]
         public void Cleanup()
         {
             Driver.Close();
-        }*/
+        }
     }
 }
